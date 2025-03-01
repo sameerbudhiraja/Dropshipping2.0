@@ -8,6 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -25,7 +28,7 @@
     <!-- Background Beams Effect (Purple Rain) -->
     <canvas id="purpleRainCanvas" class="absolute inset-0 pointer-events-none"></canvas>
 
-    <div class="flex flex-col items-center justify-center px-6 relative z-10 min-h-screen h-auto py-20">
+    <div class="flex flex-col items-center justify-center px-6 relative z-10 min-h-screen h-auto pt-20 pb-0">
         <!-- Heading without Gradient and Glowing Effect -->
         <h1
             class="text-4xl sm:text-5xl font-bold mb-6 animate-fadeIn opacity-100 font-montserrat bg-gradient-to-t from-gray-600 to-gray-300 bg-clip-text text-transparent tracking-tight relative">
@@ -93,30 +96,38 @@
             </div>
 
             <p class="text-gray-400 text-center mt-6 max-w-2xl mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aspernatur corrupti dolor facere, odio
-                magnam sapiente illo! Perspiciatis maiores ab minus officia, in repellendus repudiandae, assumenda, iste
-                minima vitae doloremque!
+                Experience the energy and innovation from our previous event. Our gallery showcases the vibrant
+                atmosphere,
+                networking opportunities, and success stories from last year's Dropshipping Fair.
             </p>
         </section>
 
         <!-- Google Form Section -->
-        <section class="form-section w-full max-w-3xl mx-auto text-center">
-            <h2
-                class="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent font-montserrat">
+        <section class="form-section">
+            <h2 class="form-title">
                 Want More Information?
             </h2>
-            <p class="text-gray-300 mb-8 text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta mollitia est sit eaque vel magni soluta
-                quos aspernatur repellendus veritatis dolorem tempore, placeat tempora pariatur minus beatae quod quo
-                magnam.
+            <p class="form-description">
+                🚀 Join the Ultimate Dropshipping Event at CGC Landran!
+
+                Learn how to build a successful online business with zero inventory and minimal investment! Gain expert
+                insights, real-world strategies, and a chance to network with like-minded entrepreneurs.
+
+                🗓️ Don't miss out—Register now! 👇
             </p>
-            <a href="https://www.instagram.com/_sameer_19___/" target="_blank" rel="noopener noreferrer"
-                class="form-button">
-                Get More Details
-            </a>
-            <p class="text-gray-400 mt-6 text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae facere modi nobis doloremque officia
-                voluptatem commodi. Amet fugiat quaerat dolorem quidem quae rem at cum omnis similique. Rem, quas sint!
+            <div class="button-container">
+                <a href="https://forms.gle/kaMAE5Zejadajbqg6" target="_blank" rel="noopener noreferrer"
+                    class="form-button">
+                    Get More Details
+                </a>
+                <a href="https://chat.whatsapp.com/C6gipDMteJgG0GJvfbG3Ez" class="whatsapp-button">
+                    <i class="fa-brands fa-whatsapp"></i> Join WhatsApp Group
+                </a>
+            </div>
+            <p class="form-note">
+                Stay updated with event details, speaker announcements, and exclusive dropshipping tips by joining our
+                community.
+                Limited spots available - secure yours today!
             </p>
         </section>
 
@@ -138,6 +149,20 @@
                 transform: translateY(0);
             }
         }
+
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+            position: relative;
+            touch-action: pan-y;
+        }
+
 
         .animate-fadeIn {
             animation: fadeIn 0.5s ease-in-out forwards;
@@ -176,6 +201,7 @@
             padding: 1rem 0;
             touch-action: pan-x pinch-zoom;
             -webkit-overflow-scrolling: touch;
+            box-sizing: border-box;
         }
 
         .gallery {
@@ -192,6 +218,7 @@
             backface-visibility: hidden;
             transform: translate3d(0, 0, 0);
             will-change: transform;
+            box-sizing: border-box;
         }
 
         .gallery::-webkit-scrollbar {
@@ -274,7 +301,7 @@
 
             .gallery {
                 gap: 0.3rem;
-                padding: 0.75rem;
+                padding: 0.2rem;
             }
         }
 
@@ -288,6 +315,33 @@
             max-width: 800px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .form-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #60a5fa, #4f46e5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .form-description {
+            color: #d1d5db;
+            margin-bottom: 2rem;
+            font-size: 1.125rem;
+            line-height: 1.6;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1.5rem;
         }
 
         .form-button {
@@ -306,6 +360,42 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
             background: linear-gradient(135deg, #4f46e5, #4338ca);
+        }
+
+        .whatsapp-button {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+            background: linear-gradient(135deg, #128C7E, #075E54);
+        }
+
+        .form-note {
+            color: #9ca3af;
+            margin-top: 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 2.5rem;
+            /* margin-bottom: 2rem; */
+            color: #9ca3af;
+            font-size: 0.875rem;
+            animation: fadeIn 0.5s ease-in-out 0.7s forwards;
+            opacity: 0;
         }
     </style>
 
@@ -329,7 +419,8 @@
                     this.x = Math.random() * canvas.width;
                     this.y = Math.random() * -canvas.height;
                     this.length = Math.random() * 30 + 15;
-                    this.speed = Math.random() * 1.5 + 0.5;
+                    this.speed = Math.random() * 1.5 + 1.0;
+                    // this.speed = Math.random() * 1.5 + 0.5;
                     this.opacity = Math.random() * 0.6 + 0.3;
                 }
 
@@ -373,12 +464,10 @@
 
         // Gallery Implementation
         const images = [
-            'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
-            'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
-            'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&q=80',
-            'https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=800&q=80',
-            'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80',
-            'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80',
+            'images/Photos-01/I1.jpg',
+            'images/Photos-01/I2.jpg',
+            'images/Photos-01/I3.jpg',
+            'images/Photos-01/I4.jpg',
         ];
 
         class InfiniteGallery {
